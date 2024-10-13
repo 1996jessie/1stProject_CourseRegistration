@@ -1,0 +1,83 @@
+drop table lectures;
+create table lectures(
+num number primary key,
+title varchar2(30),
+grade number,
+department varchar2(20),
+capacity number
+);
+
+insert into lectures values(11001,'인문1',1,'전공선택',5);
+insert into lectures values(12002,'사회1',1,'전공선택',5);
+insert into lectures values(13003,'자연1',1,'전공필수',5);
+insert into lectures values(11111,'신입생수업',1,'필수교양',5);
+insert into lectures values(22222,'공학수학',2,'전공필수',5);
+insert into lectures values(25005,'조예2',2,'필수교양',5);
+insert into lectures values(26006,'음악2',2,'일반교양',5);
+insert into lectures values(31001,'인문3',3,'일반교양',5);
+insert into lectures values(34004,'공과3',3,'전공선택',5);
+insert into lectures values(35005,'조예3',3,'전공선택',5);
+insert into lectures values(36006,'음악3',3,'전공선택',5);
+insert into lectures values(41001,'인문4',4,'전공필수',5);
+insert into lectures values(42002,'사회4',4,'전공선택',5);
+insert into lectures values(43003,'자연4',4,'필수교양',5);
+insert into lectures values(44444,'4학년수업',4,'전공필수',5);
+
+
+drop table students;
+create table students(
+id number primary key,
+name varchar2(30) not null,
+grade number not null,
+college varchar2(18),
+major varchar2(18),
+gpa number,
+password number default 1111
+);
+
+insert into students values (100001,'태연',4,'사회과학대학','정치외교학과',4,1111);
+insert into students values (100002,'티파니',4,'공과대학','화학공학과',4,1111);
+insert into students values (100003,'서현',4,'공과대학','화학공학과',3,1111);
+insert into students values (100004,'수영',4,'공과대학','화학공학과',3,1111);
+insert into students values (100005,'효연',4,'공과대학','화학공학과',3,1111);
+insert into students values (100006,'유리',4,'공과대학','화학공학과',3,1111);
+insert into students values (100007,'써니',4,'공과대학','화학공학과',3,1111);
+insert into students values (100008,'윤아',4,'공과대학','화학공학과',3,1111);
+
+
+insert into students values (241001,'민지',1,'인문과학대학','사학과',3,1111);
+insert into students values (241002,'하니',1,'인문과학대학','사학과',3,1111);
+insert into students values (241003,'다니엘',1,'인문과학대학','사학과',3,1111);
+insert into students values (241004,'혜린',1,'인문과학대학','사학과',3,1111);
+insert into students values (241005,'혜인',1,'인문과학대학','사학과',3,1111);
+insert into students values (241006,'카리나',1,'공과대학','기계공학과',3,1111);
+insert into students values (241007,'윈터',1,'공과대학','기계공학과',3,1111);
+insert into students values (241008,'지젤',1,'공과대학','기계공학과',3,1111);
+insert into students values (241009,'닝닝',1,'공과대학','기계공학과',3,1111);
+
+
+drop table save;
+create table save(
+lecnum number,
+stuid number
+);
+
+
+insert into save values (11111, 241006);
+insert into save values (11111, 241007);
+insert into save values (11111, 241008);
+insert into save values (11111, 241009);
+
+insert into save values (22222, 241006);
+insert into save values (22222, 241007);
+insert into save values (22222, 100008);
+insert into save values (22222, 100007);
+
+insert into save values (44444, 100008);
+insert into save values (44444, 100007);
+insert into save values (44444, 100006);
+insert into save values (44444, 100005);
+
+
+
+
